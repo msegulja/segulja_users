@@ -8,7 +8,7 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
-  data_bags_path: ../../chefconfigs/vault-items
+  data_bags_path: ../../chef-config/vault-items
 
 verifier:
   name: inspec
