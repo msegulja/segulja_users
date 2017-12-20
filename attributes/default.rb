@@ -1,1 +1,1 @@
-default['users']['create'] = %w(michael localuser)
+default['users']['create'] = %w(michael localuser root)

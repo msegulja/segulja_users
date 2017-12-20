@@ -17,7 +17,6 @@ node['users']['create'].each do |u|
       shell       '/bin/bash'
       password    vault[u.to_s]['password']
       action      :modify
-      not_if      { u == 'root' }
     end
   else
     user u.to_s do
