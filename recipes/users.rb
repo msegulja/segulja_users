@@ -6,6 +6,22 @@
 
 include_recipe 'chef-vault'
 
+node['groups']['create'].each do |g|
+  vault = chef_vault_item('credentials', 'groups')
+
+  if node['etc']['group'].attribute?(g.to_s)
+    group g.to_s do
+      gid         vault[g.to_s]['groupID']
+      action      :modify
+    end
+  else
+    group g.to_s do
+      gid         vault[g.to_s]['groupID']
+      action      :create
+    end
+  end
+end
+
 node['users']['create'].each do |u|
   vault = chef_vault_item('credentials', 'users')
 
