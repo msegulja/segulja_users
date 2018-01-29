@@ -12,3 +12,7 @@ end
 describe user('localuser') do
   it { should exist }
 end
+
+describe user('oracle') do
+  it { should exist }
+end
