@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'All Rights Reserved'
 description 'Installs/Configures segulja_users'
 long_description 'Installs/Configures segulja_users'
-version '0.2.2'
+version '0.2.3'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 depends 'chef-vault'
